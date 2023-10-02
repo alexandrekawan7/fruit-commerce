@@ -77,10 +77,10 @@ export default function Home() {
   items.push(<Container pr={0} mr={0} textAlign='right'>Total: R$ {(new Number(subTotal).toFixed(2))}</Container>)
 
   const { isOpen: isConfirmationOpen, onOpen: onConfirmationOpen, onClose: onConfirmationClose } = useDisclosure();
-  let confirmationCancelRef = useRef();
+  let confirmationCancelRef = useRef(null);
 
   const { isOpen: isQRCodeOpen, onOpen: onQRCodeOpen, onClose: onQRCodeClose } = useDisclosure();
-  let QRCodeCancelRef = useRef();
+  let QRCodeCancelRef = useRef(null);
 
 
 
@@ -158,7 +158,7 @@ export default function Home() {
               </AlertDialogBody>
 
               <AlertDialogFooter>
-                <Button onClick={onQRCodeClose}>Fechar</Button>
+                <Button onClick={onQRCodeClose} ref={QRCodeCancelRef}>Fechar</Button>
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialogOverlay>
