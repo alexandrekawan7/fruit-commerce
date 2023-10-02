@@ -38,11 +38,11 @@ export function Product({
     const dec = getDecrementButtonProps()
     const input = getInputProps()
 
-    let iRef = useRef();
+    let iRef = useRef(null);
 
     useEffect(() => {
         // @ts-nocheck
-        const value: number = iRef.current.value ?? 0;
+        const value: number = (iRef.current != null) ? iRef.current['value'] : 0;
 
         onUpdate(value)
     })
