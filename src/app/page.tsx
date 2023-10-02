@@ -99,7 +99,7 @@ export default function Home() {
 
 
       <Box>
-        <Flex direction="row" flexWrap="wrap" justifyContent='center' gap='8px'>
+        <Flex direction="row" flexWrap="wrap" justifyContent='center' alignItems='center' gap='8px'>
           {products}
         </Flex>
       </Box>
@@ -140,12 +140,11 @@ export default function Home() {
 
       <AbsoluteCenter>
         <AlertDialog
+          w='70%'
+          h='70%'
           isOpen={isQRCodeOpen}
           leastDestructiveRef={QRCodeCancelRef}
           onClose={onQRCodeClose}
-
-          w='70%'
-          h='70%'
         >
           <AlertDialogOverlay>
             <AlertDialogContent>
@@ -154,7 +153,7 @@ export default function Home() {
               </AlertDialogHeader>
 
               <AlertDialogBody>
-                <Flex alignItems='center' justifyContent='center' alignItems='center'>
+                <Flex alignItems='center' justifyContent='center'>
                 <Image src="/img/qr.svg" w='100%' h='100%'></Image>
                 </Flex>
                 
