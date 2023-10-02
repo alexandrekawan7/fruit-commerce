@@ -140,8 +140,6 @@ export default function Home() {
 
       <AbsoluteCenter>
         <AlertDialog
-          w='70%'
-          h='70%'
           isOpen={isQRCodeOpen}
           leastDestructiveRef={QRCodeCancelRef}
           onClose={onQRCodeClose}
@@ -154,7 +152,7 @@ export default function Home() {
 
               <AlertDialogBody>
                 <Flex alignItems='center' justifyContent='center'>
-                <Image src="/img/qr.svg" w='100%' h='100%'></Image>
+                <Image src="/img/qr.svg" w='100%' h='100%' alt='QR Code'></Image>
                 </Flex>
                 
               </AlertDialogBody>
