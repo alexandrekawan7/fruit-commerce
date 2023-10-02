@@ -1,6 +1,6 @@
 'use client'
 
-import { Flex, Box, Image, Text, Button, NumberInput, Input, useNumberInput, HStack } from '@chakra-ui/react'
+import { Flex, Center, Image, Text, Button, NumberInput, Input, useNumberInput, HStack } from '@chakra-ui/react'
 import { ChangeEvent, LegacyRef, useEffect, useRef } from 'react'
 
 export interface ProductProps {
@@ -48,7 +48,7 @@ export function Product({
     })
 
     return (
-        <Flex direction="column" maxW='120px'>
+        <Flex direction="column" justifyContent='center' alignItems='center' maxW='120px'>
             <Image src={imageSource} w='120px' h='120px' overflow='hidden' objectFit='cover' borderRadius='10%' border='2px solid black' alt={name}/>
 
             <Text fontSize='lg' fontWeight='bolder'>{name}</Text>
